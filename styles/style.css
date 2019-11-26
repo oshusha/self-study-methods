@@ -1,0 +1,613 @@
+@keyframes rotate-pic {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    }
+
+.header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    /* выше установили ограничения для секции */
+    background-color: #F2F2F2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
+    overflow: hidden;
+    }
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+    height: 568px;
+    width: 568px;
+    background-color: #2F80ED;
+    position: absolute;
+    right: 0;
+    z-index: -2;
+    top: 64px;
+    transform: rotate(-15deg);
+    animation: rotate-pic 20s linear 0s infinite;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+
+.logo_place_header {
+    background-image: url("../images/logo.svg");
+    width: 183px;
+    height: 32px;
+    top: 30px;
+    margin-left: 64px;
+    position: absolute;
+    transition: opacity 1s ease;
+}
+
+.logo_place_header:hover {
+    opacity: 0.5;
+}
+
+.header__title {
+    width: 730px;
+    position: absolute;
+    margin: 0;
+    margin-left: 64px;
+    font-size: 102px;
+    font-weight: bold;
+    line-height: 96px;
+}
+
+.header__subtitle {
+    width: 388px;
+    position: absolute;
+    margin: 0;
+    margin-left: 64px;
+    bottom: 30px;
+
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+}
+
+.header__link {
+    color:  #2F80ED;
+    text-decoration: none;
+    transition: opacity 1s ease;
+    }
+
+.header__link:hover {
+    opacity: 0.8;
+}
+
+.header__main-illustration {
+    width: 765px;
+    height: 608px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    }
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+    }
+
+.two-columns {
+    width: 80%;
+    margin-top: 100px;
+    /*margin-bottom: 100px; закомментила это и задала это свойство дескрипшн и расстояние между дескрипшн и дижитл схлопнулось в нужные 100px*/
+    display: flex; /*почему бриф и текст встают рядом? дефолтное row??*/
+    justify-content: space-between;
+    }
+
+.two-columns__brief {
+    width: 175px;
+    line-height: 1.2em;
+    font-size: 18px;
+    font-weight: normal;
+    color: #2F80ED;
+}
+
+p, h2, h3, h4 { margin: 0px;}
+
+.two-columns__main-text {
+    width: 80%;
+    min-width: 784px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.two-columns__paragraph {
+    margin: 30px 0;
+}
+
+.two-columns__paragraph:first-of-type {
+    margin: 0;
+}
+
+.two-columns__paragraph:last-of-type {
+    margin: 0;
+}
+
+.two-columns__span-accent {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.technics {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title_technics {
+    line-height: 1.15em;
+}
+
+.cards {
+    display: flex;
+    /*Ширина наследуется от page!*/
+    /*max-width: 1150px;
+    min-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;*/
+    flex-wrap: wrap;
+}
+
+.cards__item {
+    width: 240px;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 60px;
+    flex-direction: column;
+}
+
+.cards__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.cards__title {
+    margin-top: 43px;
+    text-align: center;
+
+    line-height: 1.15em;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards__description {
+    margin-top: 16px;
+    text-align: center;
+
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+.video {
+    padding-top: 100px;
+}
+
+.section-title_video {
+    line-height: 1.15em;
+}
+
+.video__iframes {
+    width: 1050px;
+    height: 316px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    top: 50px;
+}
+
+.video__iframe {
+    width: 515px;
+    height: 316px;
+}
+
+
+.oakley {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.two-columns_oakley{
+    margin-top: 0;
+}
+
+.feinman {
+    height: 790px;
+    position: relative;
+
+    background-color:  #F2F2F2;
+    background-image: url("../images/feinman.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 867px 637px;
+
+    /*padding-top: 100px;*/
+
+    display: flex;
+    flex-direction: column;
+    }
+
+.feinman__title  {
+    width: 648px;
+    text-align: center;
+    align-self: center;
+
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0px 0px 95px 0px;
+
+    line-height: 1.15em;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.feinman__subtitle {
+    text-align: center;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feinman .feinman__link {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    color: #000;
+    text-decoration: none;
+    margin-right: 48px;
+    transition: opacity 1s ease;
+}
+
+.feinman .feinman__link:hover {
+    opacity: 0.5;
+}
+
+.digits {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /*Почему убрав значения flex блок 3) встал как требуется в ряд?*/
+}
+
+.section-title {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.table {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+.table__cell {
+    width: 250px;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.table__heading {
+    line-height: 1.15em;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table__text {
+    line-height: 1.2em;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+
+.khan {
+    margin-top: 100px;
+    padding-top: 105px;
+    background-color: #F2F2F2;
+}
+
+.khan__container {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.khan__author {
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.khan__title {
+    line-height: 1.15em;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.khan__quote {
+    width: 790px;
+    margin-top: 50px;
+
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__quote-author {
+    margin-top: 36px;
+
+    line-height: 1.15em;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.khan__quote-author-subline {
+    margin-top: 10px;
+
+    line-height: 1.15em;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__book-container {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: row;
+}
+
+.khan__book-pic {
+    width: 608px;
+    height: 620px;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.khan__buy-link {
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+
+    text-decoration: none;
+    color: #2F80ED;
+    transition: opacity 1s ease;
+}
+
+.khan__buy-link:hover {
+    opacity: 0.5;
+}
+
+
+.kaufman {
+    background-color: #1F1F1F;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.section-title_theme_dark {
+    color: white;
+}
+
+.section-subtitle_theme_dark {
+    color: white;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+    width: 200px;
+    margin-top: 80px;
+}
+
+.table__heading_theme_dark {
+    color: white;
+}
+
+.table__text_theme_dark {
+    color: white;
+}
+
+.kaufman__triangle {
+    width: 877px;
+    height: 877px;
+    background-image: url("../images/triangle.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: -210px;
+    z-index: -1;
+    animation: rotate-pic 20s linear 0s infinite;
+}
+
+.resources {
+    padding-top: 100px;
+    padding-bottom: 217px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource__logo-zone {
+    width: 1100px;
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.resource__logo {
+    width: 270px;
+    height: 38px;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.resource__logo:hover {
+    opacity: 0.5;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-basis: 711px;
+    min-height: 350px;
+}
+
+.footer__columns {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.logo_place_footer {
+    background-image: url("../images/logo_white.svg");
+    top: 0;
+    left: 0;
+    width: 183px;
+    height: 35px;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease;
+}
+
+.logo_place_footer:hover {
+    opacity: 0.8;
+}
+
+.footer__author {
+    color: white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    left: 0;
+    bottom: 0;
+    margin-right: 0;
+
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column-heading {
+    color: white;
+    margin-bottom: 20px;
+
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__column-links {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 18px;
+    list-style-type: none;
+}
+
+.footer__link {
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: opacity 1s ease;
+}
+
+.footer__link:hover {
+    outline-style: none;
+    outline-width: 1px;
+    opacity: 0.5;
+}
+
+.footer__social-icons {
+    color: white;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 18px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__social-link {
+    color: white;
+    text-decoration: none;
+}
+
+
